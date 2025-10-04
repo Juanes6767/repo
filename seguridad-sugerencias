@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario: ¿Ha sido víctima o conoce alguna víctima de robo?</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
+        .form-container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; text-align: center; }
+        .info { background: #e3f2fd; padding: 15px; border-radius: 5px; margin-bottom: 20px; font-size: 14px; }
+        label { display: block; margin-top: 20px; font-weight: bold; }
+        textarea { width: 100%; height: 120px; padding: 10px; border: 1px solid #ddd; border-radius: 4px; resize: vertical; }
+        .file-upload { margin-top: 10px; }
+        input[type="file"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        .submit-btn { background: #4285f4; color: white; padding: 12px 30px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 20px; width: 100%; }
+        .submit-btn:hover { background: #3367d6; }
+        .required { color: red; }
+        .email { text-align: center; color: #666; font-size: 12px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>¿Ha sido víctima o conoce alguna víctima de robo por los alrededores de la u?</h1>
+        <p class="email">juanesteban705@gmail.com</p>
+        <div class="info">
+            <p>Esta servirá para tener en cuenta los casos que han pasado referente a robos y demandas.</p>
+            <p>El nombre, el correo y la foto asociados a tu cuenta de Google se registrarán cuando subas archivos y envíes este formulario.</p>
+        </div>
+        
+        <form action="https://formspree.io/f/xzzjglwa" method="POST" enctype="multipart/form-data">
+            <label for="description">Describe la situación y comentarios de tu caso <span class="required">*</span></label>
+            <textarea id="description" name="description" required placeholder="Tu respuesta"></textarea>
+            
+            <div class="file-upload">
+                <label>Sube hasta 10 archivos compatibles: PDF, audio, documento, imagen o video. Tamaño máximo por archivo: 100 MB.</label>
+                <input type="file" id="files" name="files" multiple accept=".pdf,.mp3,.mp4,.doc,.docx,.jpg,.jpeg,.png,.wav" />
+            </div>
+            
+            <button type="submit" class="submit-btn">Enviar formulario</button>
+        </form>
+    </div>
+</body>
+</html>
